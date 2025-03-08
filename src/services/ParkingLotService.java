@@ -11,10 +11,10 @@ import java.util.Optional;
 
 public class ParkingLotService {
 
-    private ParkingLot parkingLot;
-    private FindSlotStrategy findSlotStrategy;
-    private HashMap<String, ParkingSlot> vehicleSlotMap = new HashMap<>();
-    private HashMap<String, Ticket> vehicleTicketMap = new HashMap<>();
+    private final ParkingLot parkingLot;
+    private final FindSlotStrategy findSlotStrategy;
+    private final HashMap<String, ParkingSlot> vehicleSlotMap = new HashMap<>();
+    private final HashMap<String, Ticket> vehicleTicketMap = new HashMap<>();
 
     public ParkingLotService(ParkingLot parkingLot, FindSlotStrategy findSlotStrategy) {
         this.parkingLot = parkingLot;
