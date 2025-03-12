@@ -7,6 +7,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Parking slot is an abstract class which represents a slot on a parking floor of a parking lot.
+ *
+ */
 public abstract class ParkingSlot {
 
     private final List<VehicleType> supportedVehicleTypes;
@@ -21,6 +25,7 @@ public abstract class ParkingSlot {
         this.status = ParkingSlotStatus.EMPTY;
         this.floor.addParkingSlot(this);
         this.supportedVehicleTypes = supportedVehicleTypes;
+        this.vehicle = Optional.empty();
     }
 
     // getter setters
@@ -78,6 +83,7 @@ public abstract class ParkingSlot {
         if (vehicle.isPresent()) {
             System.out.println("Parked Vehicle: " + vehicle.get().getRegistrationNumber());
         }
+        else System.out.println("No Parked Vehicle");
     }
 
 }
