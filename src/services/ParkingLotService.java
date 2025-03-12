@@ -21,7 +21,7 @@ public class ParkingLotService {
         this.findSlotStrategy = findSlotStrategy;
     }
 
-    public void parkCar(Vehicle vehicle) {
+    public void parkVehicle(Vehicle vehicle) {
         Optional<ParkingSlot> slot = findSlotStrategy.findSlot(parkingLot, vehicle);
         if(!slot.isPresent()) {
             System.out.println("Parking is full !!!!");
