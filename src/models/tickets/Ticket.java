@@ -2,6 +2,7 @@ package models.tickets;
 
 import models.mobility.Vehicle;
 import models.parking.ParkingSlot;
+import models.payments.CardPaymentStrategy;
 import models.payments.PaymentStrategy;
 import models.pricing.PricingStrategy;
 import services.PricingService;
@@ -26,6 +27,7 @@ public class Ticket {
         this.parkingSlot = parkingSlot;
         this.pricingStrategies = pricingStrategies;
         this.id = UUID.randomUUID().toString();
+        this.paymentStrategy = Optional.of(new CardPaymentStrategy());
     }
 
     public void setExitTime(Long exitTime) {

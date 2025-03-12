@@ -5,7 +5,7 @@ import java.util.List;
 public class ParkingFloor {
 
     private int floorNumber;
-    private List<ParkingSlot> parkingSlots;
+    private final List<ParkingSlot> parkingSlots;
 
     // constructors, getters, and setters
     public ParkingFloor(int floorNumber, List<ParkingSlot> parkingSlots) {
@@ -13,8 +13,8 @@ public class ParkingFloor {
         this.parkingSlots = parkingSlots;
     }
 
-    public boolean addParkingSlot(ParkingSlot parkingSlot) {
-        return false;
+    public void addParkingSlot(ParkingSlot parkingSlot) {
+        parkingSlots.add(parkingSlot);
     }
 
     public int getFloorNumber() {
